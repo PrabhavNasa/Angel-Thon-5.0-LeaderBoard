@@ -1,70 +1,161 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# 🏆 LeaderBoard Frontend – Angel-Thon 5.0
 
-## Available Scripts
+The **LeaderBoard Frontend** is a dynamic and interactive web interface developed to track and display participant rankings in real-time during Angel-Thon 5.0. It provides an engaging user experience with a responsive layout, seamless updates, and integration with backend services powered by Google Apps Script or RESTful APIs.
 
-In the project directory, you can run:
+This frontend was designed to enhance visibility, encourage competition, and ensure transparency during the event. It is lightweight, scalable, and easy to deploy across platforms.
 
-### `npm start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 📌 Overview
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Angel-Thon 5.0 is a coding and innovation challenge, and the leaderboard application serves as the real-time scoreboard that showcases participant progress, rank, and scores. The frontend offers features such as:
 
-### `npm test`
+- Live updates of scores
+- Sorted and ranked view of participants
+- Responsive interface for desktop and mobile
+- Easy integration with backend data sources
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## 🚀 Features
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- 🥇 **Real-Time Rankings**: Dynamically updates user scores from the backend.
+- 📱 **Responsive UI**: Works seamlessly across all device sizes.
+- 🎯 **Participant Filtering**: Easily search or filter participants.
+- ⚡ **Efficient State Handling**: Keeps UI snappy with optimized rendering.
+- 🧪 **Tested & Modular Codebase**: Components are cleanly structured for readability and maintenance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 🧰 Tech Stack
 
-### `npm run eject`
+- **React.js** – JavaScript library for building user interfaces
+- **Redux (optional)** – For global state management
+- **HTML/CSS** – Page layout and styling
+- **JavaScript (ES6)** – Application logic
+- **Axios / Fetch API** – For REST API integration
+- **Google Apps Script** – Used on backend (for this version)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+---
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 📁 Project Structure
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```
+LeaderBoard-Frontend/
+│
+├── public/
+│   └── index.html
+│
+├── src/
+│   ├── components/
+│   │   ├── Header.js
+│   │   ├── LeaderTable.js
+│   │   └── Loader.js
+│   ├── App.js
+│   ├── index.js
+│   └── styles/
+│       └── main.css
+│
+├── .env
+├── package.json
+└── README.md
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+---
 
-## Learn More
+## 🔧 Setup Instructions
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### 1. Clone the Repository
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```bash
+git clone https://github.com/PrabhavNasa/LeaderBoard-Fronted.git
+cd LeaderBoard-Fronted
+```
 
-### Code Splitting
+### 2. Install Dependencies
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+```bash
+npm install
+```
 
-### Analyzing the Bundle Size
+### 3. Configure Environment (if needed)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+If you're using an API:
 
-### Making a Progressive Web App
+```env
+REACT_APP_API_URL=https://your-api-url.com
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### 4. Run the Application
 
-### Advanced Configuration
+```bash
+npm start
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+The app will be available at `http://localhost:3000`.
 
-### Deployment
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## 📊 Live Demo
 
-### `npm run build` fails to minify
+> _[Add demo link if deployed on Netlify, Vercel, or GitHub Pages]_
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+---
+
+## 🔌 Backend Integration
+
+This frontend is designed to consume a leaderboard API, either served from:
+- A custom Node.js backend
+- Google Apps Script-based backend pulling from Google Sheets
+
+Sample API expected:
+
+```json
+[
+  {
+    "name": "Alice",
+    "score": 340,
+    "rank": 1
+  },
+  {
+    "name": "Bob",
+    "score": 270,
+    "rank": 2
+  }
+]
+```
+
+---
+
+## 📈 Future Enhancements
+
+- Add animations for rank changes
+- Export to CSV/PDF
+- Admin login for score entry
+- Support multiple leaderboards by event
+- Graphical charts for performance trends
+
+---
+
+## 🧠 Why This Project?
+
+Hackathons and coding competitions thrive on energy and visibility. This leaderboard helps organizers and participants track standings live, motivating teams and ensuring fair competition. It also reflects real-world frontend skills like API integration, responsive design, and live data handling.
+
+---
+
+## 👨‍💻 Author
+
+**Prabhav Nasa**  
+GitHub: [@PrabhavNasa](https://github.com/PrabhavNasa)  
+LinkedIn: [prabhavnasa23](https://linkedin.com/in/prabhavnasa23)
+
+---
+
+## 📄 License
+
+This project is licensed under the **MIT License**.
+
+---
+
+Made with 💡 to support innovation at Angel-Thon 5.0.
